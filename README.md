@@ -1,7 +1,7 @@
-# product-and-category-creation-with-fastify-and-vue
+# Product and Category Creation with Fastify Typescript and Prisma using MySQL
 # Project Title
 
-Building a Fastify TypeScript Project with VueJs, Node.js, Prisma, and MySQL Integration.
+Building a Fastify TS Prisma: Product & Category Creation with MySQL Integration.
 
 ## Table of Contents
 
@@ -12,8 +12,8 @@ Building a Fastify TypeScript Project with VueJs, Node.js, Prisma, and MySQL Int
 ## Steps to Run the Project
 1. Clone the Repository:
 ```
-git clone https://github.com/your-username/your-repo.git
-cd Fastify-API-with-Prisma-and-Image-Upload-Resize-Integration
+git clone https://github.com/0xelsherif/Product-and-Category-Creation-with-Fastify-Typescript-and-Prisma-using-MySQL.git
+cd Product-and-Category-Creation-with-Fastify-Typescript-and-Prisma-using-MySQL
 ```
 2. Install Dependencies:
 ```
@@ -72,7 +72,7 @@ curl -X POST -H "Content-Type: application/json" -d "{\"upload.jpg\",\"category_
 
 ### License
 
-Database Schema Repository is licensed under the MIT License.
+Product and Category Creation with Fastify Typescript and Prisma using MySQL Repository is licensed under the MIT License.
 > [!CAUTION]
 >No Warranty: The software is provided "as is," without warranty of any kind, express or implied. The author or copyright holder is not liable for any claims or damages arising from the use of the software.
 
