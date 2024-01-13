@@ -1,0 +1,33 @@
+{
+  "name": "product-and-category-creation-with-fastify-and-vue.js-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json -w",
+    "start": "nodemon --exec ts-node index.ts",
+    "dev": "nodemon --exec ts-node index.ts",
+    "prod": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.5.0",
+    "@prisma/client": "^5.8.0",
+    "fastify": "^4.25.2",
+    "fastify-cors": "^6.1.0",
+    "gm": "^1.25.0",
+    "node-addon-api": "^7.0.0",
+    "node-gyp": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/fastify-cors": "^2.1.0",
+    "@types/gm": "^1.25.4",
+    "@types/node": "^20.11.0",
+    "nodemon": "^2.0.12",
+    "prisma": "^5.8.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
