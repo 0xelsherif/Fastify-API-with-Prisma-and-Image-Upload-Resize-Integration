@@ -5,67 +5,75 @@ Building a Fastify TypeScript Project with VueJs, Node.js, Prisma, and MySQL Int
 
 ## Table of Contents
 
-- [Project Setup](#Project-Setup)
-- [Database Integration](#Database-Integration)
-- [Categories tables using migration](#categories-tables-using-migration)
-- [Products tables using migration](#products-tables-using-migration)
-- [Image Handling](#Image-Handling)
+- [Steps to Run the Project](#Steps-to-Run-the-Project)
+- [API Endpoints / Testing](#API-Endpoints-/-Testing)
 - [License](#License)
 
-## Project setup
+## Steps to Run the Project
+1. Clone the Repository:
+```
+git clone https://github.com/your-username/your-repo.git
+cd Fastify-API-with-Prisma-and-Image-Upload-Resize-Integration
+```
+2. Install Dependencies:
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+3. Create a Database in PhpMyAdmin:
+Open PhpMyAdmin in your browser.
+Log in with your credentials.
+Click on the "Databases" tab.
+Enter a name for your database in the "Create database" field.
+Choose the collation (e.g., utf8mb4_general_ci).
+Click the "Create" button.
+4. Configure .env File:
+In the root of your project, find or create a file named .env.
+Add the following line to configure your MySQL database connection:
 ```
-npm run serve
+DATABASE_URL=mysql://<username>:<password>@localhost:3306/<database>
 ```
-
-### Compiles and minifies for production
+5. Run Database Migrations:
 ```
-npm run build
+npx prisma migrate dev
 ```
-
-### Lints and fixes files
+6. Run Database Migrations:
 ```
-npm run lint node -r ts-node/register prisma/migrations/seed.ts
-
+node -r ts-node/register prisma/migrations/seed.ts
+```
+7. Start the Server:
+```
+npm run start
 ```
 ### API Endpoints / Testing
 1- Test the Welcome Endpoint
-
 ```
 curl http://localhost:3000/
 ```
-
 2- Get All Categories
-
 ```
 curl http://localhost:3000/categories
 ```
-
 3- Create a Category
-
 ```
 curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"YourCategoryName\"}" http://localhost:3000/categories
 ```
-
 4- Update Category by ID
-
 ```
 curl -X PUT -H "Content-Type: application/json" -d "{\"name\":\"UpdatedCategoryName\"}" http://localhost:3000/categories/id
 ```
-
 5- Delete Category by ID
-
 ```
 curl -X DELETE http://localhost:3000/categories/id
 ```
-
 6- Upload Image
-
 ```
 curl -X POST -H "Content-Type: application/json" -d "{\"upload.jpg\",\"category_id\"id}" http://localhost:3000/upload
 ```
 
+### License
+
+Database Schema Repository is licensed under the MIT License.
+> [!CAUTION]
+>No Warranty: The software is provided "as is," without warranty of any kind, express or implied. The author or copyright holder is not liable for any claims or damages arising from the use of the software.
+
+Created by [Ahmed El-sherif](https://github.com/0xelsherif/)
